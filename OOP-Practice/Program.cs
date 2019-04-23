@@ -2,53 +2,9 @@
 
 namespace OOP_Practice
 {
-    class Employee
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-
-        public Employee(string fn, string ln)
-        {
-            this.FirstName = fn;
-            this.LastName = ln;
-        }
-
-        public virtual void PrintFullName()
-        {
-            Console.WriteLine(this.FirstName + " " + this.LastName);
-        }
-    }
-
-    class PartTimeEmployee : Employee
-    {
-        public float HourlyRate { get; set; }
-
-        public PartTimeEmployee(string fn, string ln, float rate) : base(fn, ln)
-        {
-            //this.FirstName = fn;
-            //this.LastName = ln;
-            this.HourlyRate = rate;
-        }
-
-    }
-
-    class FullTimeEmployee : Employee
-    {
-        public float Salary { get; set; }
-
-        public FullTimeEmployee(string fn, string ln, float salary) : base("Fahad", "Rahman")
-        {
-            this.Salary = salary;
-        }
-
-        public override void PrintFullName()
-        {
-            Console.WriteLine(this.FirstName + " " + this.LastName + " makes a yearly salary of " + this.Salary);
-        }
-    }
 
 
-
+    // Basic Inheritance Practice - Includes overriding methods and calling base constructor
     class Program
     {
         static void Main(string[] args)
